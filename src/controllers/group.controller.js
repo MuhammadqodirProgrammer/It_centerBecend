@@ -34,6 +34,7 @@ exports.groupGetAll = async (req, res) => {
     .populate("secondaryTeacherId");
 
     const allData = await Groupes.find()
+    console.log(allData);
 const total_page = Math.ceil(allData.length/limit)
 
   res.status(200).json({ data: groupes,total_page });
